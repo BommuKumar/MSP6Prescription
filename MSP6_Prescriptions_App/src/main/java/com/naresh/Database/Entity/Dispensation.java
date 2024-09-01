@@ -2,6 +2,8 @@ package com.naresh.Database.Entity;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -29,25 +31,24 @@ public class Dispensation {
 	private String dispensedBy;
 	
 	
+	@JsonIgnore
 	@ManyToOne(cascade = CascadeType.REFRESH)
 	@JoinColumn(name="medication_id")
 	private Medications medications;
 
 
+	@JsonIgnore
 	@ManyToOne(cascade = CascadeType.REFRESH)
 	@JoinColumn(name="prescription_id")
 	private Prescriptions  prescriptions;
 	
 	
+	@JsonIgnore
 	@ManyToOne(cascade = CascadeType.REFRESH)
 	@JoinColumn(name="pharmacy_id")
 	private Pharmacy  pharmacy;
  
-
-	 
-
  
-
 	public int getDispensationId() {
 		return dispensationId;
 	}

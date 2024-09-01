@@ -19,14 +19,10 @@ public class MedicationDto {
 	private String dosage;
 	
 	private String frequency;
-	
-	
-	
+	 
 	private List<Dispensation> dispensations ;
 
-
  
-
 	public MedicationDto(String medicationName, String dosage, String frequency, List<Dispensation> dispensations) {
 		super();
 		this.medicationName = medicationName;

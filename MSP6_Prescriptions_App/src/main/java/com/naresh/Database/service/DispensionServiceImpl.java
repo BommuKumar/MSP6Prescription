@@ -2,7 +2,10 @@ package com.naresh.Database.service;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import com.naresh.Database.CustomException.InvalidDetails;
 import com.naresh.Database.Dto.DispensationDto;
+import com.naresh.Database.Dto.DispensedResDto;
 import com.naresh.Database.Entity.Dispensation;
 import com.naresh.Database.Entity.Medications;
 import com.naresh.Database.Entity.Pharmacy;
@@ -75,6 +79,34 @@ public class DispensionServiceImpl implements DispensionService {
 		 
 	 	
  	}
+
+	@Override
+	public List<DispensedResDto> getAllDespentions(int patientId) {
+
+		ModelMapper modelMapper=new ModelMapper();
+
+		List<Prescriptions> prescriptions=prescriptionsRepository.findByPatientId(patientId);
+		
+		List<Dispensation> result= new ArrayList<>();
+		
+		List<DispensationDto> res = new ArrayList<>();
+		
+		prescriptions.stream().forEach(prescription->
+		{
+			prescription.getMedications().stream().forEach(Medication->
+			{
+				result.addAll(Medication.getDispensations());
+			});
+			
+		});
+		
+		
+		return result.stream().map(dis->
+		     {
+		      return  modelMapper.map(dis, DispensedResDto.class);
+		    }
+	 	).collect(Collectors.toList());
+	}
 
 }
 

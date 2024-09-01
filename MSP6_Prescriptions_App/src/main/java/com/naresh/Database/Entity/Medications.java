@@ -2,6 +2,8 @@ package com.naresh.Database.Entity;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -31,7 +33,7 @@ public class Medications {
 	
 	private String frequency;
 	
-	
+	@JsonIgnore
 	@ManyToOne()
 	@JoinColumn(name="prescription_id")
 	private Prescriptions prescriptions; 
