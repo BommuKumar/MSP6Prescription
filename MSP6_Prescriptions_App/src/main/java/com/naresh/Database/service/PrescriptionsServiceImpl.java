@@ -105,4 +105,15 @@ public class PrescriptionsServiceImpl implements PrescriptionsService {
  		 
 	}
 
+
+	@Override
+	public List<Prescriptions> PrescriptionHistoryForPatients(int patientId) {
+		
+	
+
+		List<Prescriptions> allPrescriptions=prescriptionsRepository.findByPatientId(patientId);
+		
+		return allPrescriptions;
+	}
+
 }
