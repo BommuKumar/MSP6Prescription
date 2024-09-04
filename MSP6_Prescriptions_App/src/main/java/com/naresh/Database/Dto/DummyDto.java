@@ -7,4 +7,9 @@ public class DummyDto {
 		
 	}
 
+	public void set()
+	{
+		
+	}
+
 }
