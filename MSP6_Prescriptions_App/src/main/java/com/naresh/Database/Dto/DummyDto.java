@@ -11,5 +11,10 @@ public class DummyDto {
 	{
 		
 	}
+	
+	public void hmmm()
+	{
+		
+	}
 
 }
