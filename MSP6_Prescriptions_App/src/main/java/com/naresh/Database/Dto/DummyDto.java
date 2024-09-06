@@ -16,5 +16,10 @@ public class DummyDto {
 	{
 		
 	}
+	public void kkkk()
+	{
+		
+	}
+
 
 }
