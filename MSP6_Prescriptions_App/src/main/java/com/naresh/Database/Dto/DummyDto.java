@@ -20,7 +20,15 @@ public class DummyDto {
 	{
 		
 	}
-	 
+
+	public void hjkl()
+	{
+		
+	}
+	public void hjkl2()
+	{
+		
+	}
 
 
 }
