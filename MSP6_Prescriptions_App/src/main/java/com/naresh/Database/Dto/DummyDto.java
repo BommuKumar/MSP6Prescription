@@ -38,6 +38,16 @@ public class DummyDto {
 		{
 			
 		}
+		public void hjkl5()
+		{
+			
+		}
+		
+		public void hjkl6()
+		{
+			
+		}
+
 
 
 }
