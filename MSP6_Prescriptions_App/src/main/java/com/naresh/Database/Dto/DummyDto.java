@@ -63,6 +63,10 @@ public class DummyDto {
 		{
 			
 		}
+		public void hjk20()
+		{
+			
+		}
 
 
 
