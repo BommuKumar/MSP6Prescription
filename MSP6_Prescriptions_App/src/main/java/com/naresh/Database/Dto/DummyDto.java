@@ -67,6 +67,11 @@ public class DummyDto {
 		{
 			
 		}
+		public void hjk110()
+		{
+			
+		}
+ 
  
 
 
