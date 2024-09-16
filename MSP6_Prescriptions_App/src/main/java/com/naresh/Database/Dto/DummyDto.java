@@ -71,6 +71,11 @@ public class DummyDto {
 		{
 			
 		}
+		public void dfghj()
+		{
+			
+		}
+ 
  
  
 
