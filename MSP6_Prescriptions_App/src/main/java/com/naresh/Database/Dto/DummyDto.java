@@ -79,5 +79,10 @@ public class DummyDto {
 		{
 			
 		}
+		public void rtyuio()
+		{
+			
+		}
+ 
  
 }
