@@ -88,6 +88,11 @@ public class DummyDto {
 		{
 			
 		}
+		
+		public void ertyuio()
+		{
+			
+		}
  
  
  
