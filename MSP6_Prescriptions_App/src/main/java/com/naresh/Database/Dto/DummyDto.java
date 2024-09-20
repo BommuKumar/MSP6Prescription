@@ -83,6 +83,12 @@ public class DummyDto {
 		{
 			
 		}
+		
+		public void kjhgf()
+		{
+			
+		}
+ 
  
  
 }
