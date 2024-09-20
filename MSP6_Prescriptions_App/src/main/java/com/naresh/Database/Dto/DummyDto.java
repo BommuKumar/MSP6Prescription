@@ -5,6 +5,9 @@ public class DummyDto {
 	public void get()
 	{
 		
+	}public void get56789()
+	{
+		
 	}
 
 	public void set()
